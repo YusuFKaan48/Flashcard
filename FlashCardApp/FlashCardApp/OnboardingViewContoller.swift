@@ -13,17 +13,32 @@ class OnboardingViewContoller: UIViewController {
     let labelTitle = UILabel()
     let label = UILabel()
     
+    let titleName: String
+    let labelText: String
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         style()
         layout()
         
     }
+    
+    init(titleName: String, labelText: String) {
+        self.titleName = titleName
+        self.labelText = labelText
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }
 
 extension OnboardingViewContoller {
     
     func style() {
+        view.backgroundColor = .systemBackground
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         
@@ -32,14 +47,14 @@ extension OnboardingViewContoller {
         labelTitle.font = UIFont.preferredFont(forTextStyle: .title1)
         labelTitle.adjustsFontForContentSizeCategory = true
         labelTitle.numberOfLines = 0
-        labelTitle.text = "Tutorial"
+        labelTitle.text = titleName
         
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         label.font = UIFont.preferredFont(forTextStyle: .title3)
         label.adjustsFontForContentSizeCategory = true
         label.numberOfLines = 0
-        label.text = "When the question mark button is pressed, the card flips over and the meaning of the word is displayed."
+        label.text = labelText
     }
     
     func layout() {

@@ -27,8 +27,8 @@ class OnboardingContainerViewController: UIViewController {
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         self.pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
         
-        let page1 = ViewController1()
-        let page2 = ViewController2()
+        let page1 = OnboardingViewContoller(titleName: "Tutorial", labelText: "When the question mark button is pressed, the card flips over and the meaning of the word is displayed.")
+        let page2 = OnboardingViewContoller(titleName: "Tutorial", labelText: "Pressing the checkmark sign will take you to the next flashcard.")
         
         pages.append(page1)
         pages.append(page2)
@@ -97,19 +97,3 @@ extension OnboardingContainerViewController: UIPageViewControllerDataSource {
         return pages.firstIndex(of: self.currentVC) ?? 0
     }
 }
-
-// MARK: - ViewControllers
-class ViewController1: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .systemRed
-    }
-}
-
-class ViewController2: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .systemGreen
-    }
-}
-
