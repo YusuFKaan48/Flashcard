@@ -91,7 +91,7 @@ class MyFooterClass: UICollectionReusableView {
 
 
 
-class ViewController: UIViewController {
+class FlowLayout: UIViewController {
     
     let words = ["はい = hai", "いいえ = iie", "優しい = utsukushī", "今日 = kyō","年 = toshi", "水 = mizu", "コーヒー = kōhī", "医者 = isha", "寒い = samui", "眼鏡 = megane", "馬 = uma","警察 = keisatsu", "雪 = yuki", "うさぎ = usagi", "雨 = ame"]
     
@@ -140,7 +140,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UICollectionViewDataSource {
+extension FlowLayout: UICollectionViewDataSource {
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -160,7 +160,7 @@ extension ViewController: UICollectionViewDataSource {
     }
 }
 
-extension ViewController: UICollectionViewDelegate {
+extension FlowLayout: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.row + 1)
@@ -169,7 +169,7 @@ extension ViewController: UICollectionViewDelegate {
    }
 }
 
-extension ViewController: UICollectionViewDelegateFlowLayout {
+extension FlowLayout: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,

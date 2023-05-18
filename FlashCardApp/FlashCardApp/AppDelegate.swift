@@ -7,30 +7,48 @@
 
 import UIKit
 
+let appColor: UIColor = .systemIndigo
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
-    
     let loginViewController = LoginViewController()
-    let onboardingContainerViewController = OnboardingContainerViewController()
-    let dummyViewController = DummyViewController()
-    let flowLayout = ViewController()
-    
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions:
-                     [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    let onboardingViewController = OnboardingContainerViewController()
+    let mainViewController = MainViewController()
+        
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         window?.backgroundColor = .systemBackground
         
         loginViewController.delegate = self
-        onboardingContainerViewController.delegate = self
-        dummyViewController.logoutDelegate = self
+        onboardingViewController.delegate = self
         
-        window?.rootViewController = loginViewController
+      
 
+        displayLogin()
         return true
+    }
+    
+    private func displayLogin() {
+        setRootViewController(loginViewController)
+    }
+    
+    private func displayNextScreen() {
+        if LocalState.hasOnboarded {
+            prepMainView()
+            setRootViewController(mainViewController)
+        } else {
+            setRootViewController(onboardingViewController)
+        }
+    }
+    
+    private func prepMainView() {
+    //    mainViewController.setStatusBar()
+        UINavigationBar.appearance().isTranslucent = false
+    //    UINavigationBar.appearance().backgroundColor = appColor
     }
 }
 
@@ -52,29 +70,22 @@ extension AppDelegate {
     }
 }
 
-
 extension AppDelegate: LoginViewControllerDelegate {
     func didLogin() {
-        if LocalState.hasOnboarded {
-                setRootViewController(flowLayout)
-            } else {
-                setRootViewController(onboardingContainerViewController)
-            }
-        }
+        displayNextScreen()
+    }
 }
 
 extension AppDelegate: OnboardingContainerViewControllerDelegate {
     func didFinishOnboarding() {
         LocalState.hasOnboarded = true
-        setRootViewController(flowLayout)
+        prepMainView()
+        setRootViewController(mainViewController)
     }
 }
 
 extension AppDelegate: LogoutDelegate {
-    func didLogout() {
+    @objc func didLogout() {
         setRootViewController(loginViewController)
     }
 }
-
-
-

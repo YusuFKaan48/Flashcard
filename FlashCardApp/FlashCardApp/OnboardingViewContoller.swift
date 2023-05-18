@@ -7,21 +7,14 @@
 
 import UIKit
 
-class OnboardingViewContoller: UIViewController {
+class OnboardingViewController: UIViewController {
     
     let stackView = UIStackView()
-    let labelTitle = UILabel()
-    let label = UILabel()
+    let titleNameView = UILabel()
+    let labelTextView = UILabel()
     
     let titleName: String
     let labelText: String
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        style()
-        layout()
-        
-    }
     
     init(titleName: String, labelText: String) {
         self.titleName = titleName
@@ -31,44 +24,52 @@ class OnboardingViewContoller: UIViewController {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError("init(coder:) has not been implemented - not using storyboards")
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        style()
+        layout()
     }
 }
 
-extension OnboardingViewContoller {
-    
+extension OnboardingViewController {
     func style() {
         view.backgroundColor = .systemBackground
+        
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
+        stackView.spacing = 20
         
-        labelTitle.translatesAutoresizingMaskIntoConstraints = false
-        labelTitle.textAlignment = .center
-        labelTitle.font = UIFont.preferredFont(forTextStyle: .title1)
-        labelTitle.adjustsFontForContentSizeCategory = true
-        labelTitle.numberOfLines = 0
-        labelTitle.text = titleName
+        // titleLabel
+        titleNameView.translatesAutoresizingMaskIntoConstraints = false
+        titleNameView.textAlignment = .center
+        titleNameView.font = UIFont.preferredFont(forTextStyle: .largeTitle)
+        titleNameView.adjustsFontForContentSizeCategory = true
+        titleNameView.numberOfLines = 0
+        titleNameView.text = titleName
         
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textAlignment = .center
-        label.font = UIFont.preferredFont(forTextStyle: .title3)
-        label.adjustsFontForContentSizeCategory = true
-        label.numberOfLines = 0
-        label.text = labelText
+        // labelTextLabel
+        labelTextView.translatesAutoresizingMaskIntoConstraints = false
+        labelTextView.textAlignment = .center
+        labelTextView.font = UIFont.preferredFont(forTextStyle: .title3)
+        labelTextView.adjustsFontForContentSizeCategory = true
+        labelTextView.numberOfLines = 0
+        labelTextView.text = labelText
     }
     
     func layout() {
-        stackView.addArrangedSubview(labelTitle)
-        stackView.addArrangedSubview(label)
-        stackView.spacing = 20
+        stackView.addArrangedSubview(titleNameView)
+        stackView.addArrangedSubview(labelTextView)
         
         view.addSubview(stackView)
         
         NSLayoutConstraint.activate([
-                   stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-                   stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-                   stackView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 2),
-                   view.trailingAnchor.constraint(equalToSystemSpacingAfter: stackView.trailingAnchor, multiplier: 2)
-               ])
+            stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            stackView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
+            view.trailingAnchor.constraint(equalToSystemSpacingAfter: stackView.trailingAnchor, multiplier: 1)
+        ])
     }
 }

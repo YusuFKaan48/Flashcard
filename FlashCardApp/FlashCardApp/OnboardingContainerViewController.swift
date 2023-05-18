@@ -5,13 +5,6 @@
 //  Created by Yusuf Kaan USTA on 17.05.2023.
 //
 
-//
-//  OnboardingContainerViewController.swift
-//  Bankey
-//
-//  Created by jrasmusson on 2021-09-28.
-//
-
 import UIKit
 
 protocol OnboardingContainerViewControllerDelegate: AnyObject {
@@ -32,8 +25,9 @@ class OnboardingContainerViewController: UIViewController {
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         self.pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
         
-        let page1 = OnboardingViewContoller(titleName: "Welcome", labelText: "When you tap on the flashcard, it flips over and displays meaning of the word.")
-        let page2 = OnboardingViewContoller(titleName: "I have something to say.", labelText: "Congratulations on your learning journey. To continue, please press the close button.")
+        let page1 = OnboardingViewController(titleName: "Welcome", labelText: "When you tap on the flashcard, it flips over and displays meaning of the word.")
+        let page2 = OnboardingViewController(titleName: "I have something to say.", labelText: "Congratulations on your learning journey. To continue, please press the close button.")
+
         
         pages.append(page1)
         pages.append(page2)
@@ -56,8 +50,6 @@ class OnboardingContainerViewController: UIViewController {
     }
     private func setup(){
         super.viewDidLoad()
-        
-  //      view.backgroundColor = .systemIndigo
         
         addChild(pageViewController)
         view.addSubview(pageViewController.view)
