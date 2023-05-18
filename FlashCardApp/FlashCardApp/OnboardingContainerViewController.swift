@@ -32,8 +32,8 @@ class OnboardingContainerViewController: UIViewController {
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         self.pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
         
-        let page1 = OnboardingViewContoller(titleName: "Tutorial", labelText: "When the question mark button is pressed, the card flips over and the meaning of the word is displayed.")
-        let page2 = OnboardingViewContoller(titleName: "Tutorial", labelText: "Pressing the checkmark sign will take you to the next flashcard.")
+        let page1 = OnboardingViewContoller(titleName: "Welcome", labelText: "When you tap on the flashcard, it flips over and displays meaning of the word.")
+        let page2 = OnboardingViewContoller(titleName: "I have something to say.", labelText: "Congratulations on your learning journey. To continue, please press the close button.")
         
         pages.append(page1)
         pages.append(page2)
@@ -57,7 +57,7 @@ class OnboardingContainerViewController: UIViewController {
     private func setup(){
         super.viewDidLoad()
         
-        view.backgroundColor = .systemIndigo
+  //      view.backgroundColor = .systemIndigo
         
         addChild(pageViewController)
         view.addSubview(pageViewController.view)
