@@ -21,6 +21,7 @@
 		D23715782A1673D60081C654 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23715772A1673D60081C654 /* MainViewController.swift */; };
 		D237157A2A175C3E0081C654 /* HouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23715792A175C3E0081C654 /* HouseViewController.swift */; };
 		D237157D2A175D5A0081C654 /* DailyMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D237157C2A175D5A0081C654 /* DailyMessageView.swift */; };
+		D237157F2A177B2F0081C654 /* TodayWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D237157E2A177B2F0081C654 /* TodayWordView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		D23715772A1673D60081C654 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D23715792A175C3E0081C654 /* HouseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseViewController.swift; sourceTree = "<group>"; };
 		D237157C2A175D5A0081C654 /* DailyMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMessageView.swift; sourceTree = "<group>"; };
+		D237157E2A177B2F0081C654 /* TodayWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayWordView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 			children = (
 				D23715792A175C3E0081C654 /* HouseViewController.swift */,
 				D237157C2A175D5A0081C654 /* DailyMessageView.swift */,
+				D237157E2A177B2F0081C654 /* TodayWordView.swift */,
 			);
 			name = House;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				D237157D2A175D5A0081C654 /* DailyMessageView.swift in Sources */,
 				D237155E2A13ADE80081C654 /* LoginView.swift in Sources */,
 				D23715742A160C930081C654 /* FlowLayout.swift in Sources */,
+				D237157F2A177B2F0081C654 /* TodayWordView.swift in Sources */,
 				D23715762A16720F0081C654 /* UIViewController+Utils.swift in Sources */,
 				D237156A2A14F3D00081C654 /* LocalState.swift in Sources */,
 				D23715672A14E7B60081C654 /* DummyViewController.swift in Sources */,

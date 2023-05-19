@@ -210,7 +210,6 @@ extension FlowLayout: UICollectionViewDelegateFlowLayout {
         }
     }
     
-    // Width doesn't matter because scroll is vertical. Only height used.
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         referenceSizeForHeaderInSection section: Int) -> CGSize {
