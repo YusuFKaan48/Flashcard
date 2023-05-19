@@ -11,7 +11,6 @@ class MyHeaderClass: UICollectionReusableView {
     
     weak var textLabel: UILabel!
     private var dividerView: UIView!
-
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -41,7 +40,7 @@ class MyHeaderClass: UICollectionReusableView {
         ])
         dividerView.backgroundColor = .lightGray
         
-        backgroundColor = .systemBackground
+        backgroundColor = UIColor.systemBackground
     }
     
     required init?(coder: NSCoder) {
@@ -132,7 +131,7 @@ class FlowLayout: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = UIColor.systemBackground
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(MyCell.self, forCellWithReuseIdentifier: "MyCell")
@@ -278,6 +277,7 @@ class MyCell: UICollectionViewCell {
         contentView.layer.cornerRadius = 16.0
         contentView.layer.borderWidth = 1.0
         contentView.layer.borderColor = UIColor.systemIndigo.cgColor
+        contentView.backgroundColor = UIColor.systemBackground
         
         textLabel.textAlignment = .center
         textLabel.font = UIFont.systemFont(ofSize: 20.0)
@@ -306,10 +306,11 @@ class MyCell: UICollectionViewCell {
         backView.isHidden = !isShowingBack
         textLabel.text = text
         backLabel.text = text
+        textLabel.textColor = UIColor.label
+        backLabel.textColor = UIColor.label
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
-
