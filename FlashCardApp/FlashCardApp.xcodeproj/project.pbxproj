@@ -19,6 +19,8 @@
 		D23715742A160C930081C654 /* FlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23715732A160C930081C654 /* FlowLayout.swift */; };
 		D23715762A16720F0081C654 /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23715752A16720F0081C654 /* UIViewController+Utils.swift */; };
 		D23715782A1673D60081C654 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23715772A1673D60081C654 /* MainViewController.swift */; };
+		D237157A2A175C3E0081C654 /* HouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23715792A175C3E0081C654 /* HouseViewController.swift */; };
+		D237157D2A175D5A0081C654 /* DailyMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D237157C2A175D5A0081C654 /* DailyMessageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		D23715732A160C930081C654 /* FlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowLayout.swift; sourceTree = "<group>"; };
 		D23715752A16720F0081C654 /* UIViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utils.swift"; sourceTree = "<group>"; };
 		D23715772A1673D60081C654 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D23715792A175C3E0081C654 /* HouseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseViewController.swift; sourceTree = "<group>"; };
+		D237157C2A175D5A0081C654 /* DailyMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMessageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +75,9 @@
 			isa = PBXGroup;
 			children = (
 				D23715472A13AB890081C654 /* AppDelegate.swift */,
-				D23715732A160C930081C654 /* FlowLayout.swift */,
 				D23715772A1673D60081C654 /* MainViewController.swift */,
+				D23715732A160C930081C654 /* FlowLayout.swift */,
+				D237157B2A175C4E0081C654 /* House */,
 				D237155C2A13ADB30081C654 /* Login */,
 				D237155F2A14A7240081C654 /* Onboarding */,
 			);
@@ -117,6 +122,15 @@
 			);
 			name = Utils;
 			path = FlashCardApp;
+			sourceTree = "<group>";
+		};
+		D237157B2A175C4E0081C654 /* House */ = {
+			isa = PBXGroup;
+			children = (
+				D23715792A175C3E0081C654 /* HouseViewController.swift */,
+				D237157C2A175D5A0081C654 /* DailyMessageView.swift */,
+			);
+			name = House;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D237157D2A175D5A0081C654 /* DailyMessageView.swift in Sources */,
 				D237155E2A13ADE80081C654 /* LoginView.swift in Sources */,
 				D23715742A160C930081C654 /* FlowLayout.swift in Sources */,
 				D23715762A16720F0081C654 /* UIViewController+Utils.swift in Sources */,
@@ -197,6 +212,7 @@
 				D237154C2A13AB890081C654 /* LoginViewController.swift in Sources */,
 				D23715482A13AB890081C654 /* AppDelegate.swift in Sources */,
 				D23715632A14ABFC0081C654 /* OnboardingViewContoller.swift in Sources */,
+				D237157A2A175C3E0081C654 /* HouseViewController.swift in Sources */,
 				D23715612A14A7450081C654 /* OnboardingContainerViewController.swift in Sources */,
 				D23715782A1673D60081C654 /* MainViewController.swift in Sources */,
 			);

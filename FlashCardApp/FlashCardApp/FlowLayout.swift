@@ -11,6 +11,7 @@ class MyHeaderClass: UICollectionReusableView {
     
     weak var textLabel: UILabel!
     private var dividerView: UIView!
+
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -57,6 +58,7 @@ class MyFooterClass: UICollectionReusableView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         addSubview(label)
@@ -98,9 +100,6 @@ class FlowLayout: UIViewController {
     
     
     let translations = ["Yes", "No", "Beatiful", "Today","Year", "Water", "Coffee", "Doctor", "Cold", "Glasses", "Horse","Police", "Snow", "Rabbit", "Rain"]
-    
-    
-    
     
 
     weak var collectionView: UICollectionView!

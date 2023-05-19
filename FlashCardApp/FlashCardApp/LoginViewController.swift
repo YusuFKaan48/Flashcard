@@ -34,12 +34,6 @@ class LoginViewController: UIViewController {
            return loginView.passwordTextField.text
        }
     
-    // animation
-    var leadingEdgeOnScreen: CGFloat = 16
-    var leadingEdgeOffScreen: CGFloat = -1000
-
-    var titleLeadingAnchor: NSLayoutConstraint?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         style()

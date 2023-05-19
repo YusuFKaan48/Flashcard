@@ -16,7 +16,7 @@ class MainViewController: UITabBarController {
     }
 
     private func setupViews() {
-        let summaryVC = AccountSummaryViewController()
+        let summaryVC = HouseViewController()
         let moneyVC = FlowLayout()
 
         summaryVC.setTabBarImage(imageName: "house.fill", title: "Home")
