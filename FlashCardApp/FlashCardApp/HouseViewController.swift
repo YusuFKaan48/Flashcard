@@ -24,6 +24,7 @@ class HouseViewController: UIViewController {
 extension HouseViewController {
     
     func style() {
+        
         dailyMessageView.translatesAutoresizingMaskIntoConstraints = false
         todayWordView.translatesAutoresizingMaskIntoConstraints = false
         todayWordLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -47,8 +48,8 @@ extension HouseViewController {
         
         NSLayoutConstraint.activate([
             dailyMessageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
-            dailyMessageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            dailyMessageView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+     //      dailyMessageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+     //       dailyMessageView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
         
         NSLayoutConstraint.activate([

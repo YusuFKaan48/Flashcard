@@ -27,7 +27,7 @@ class MyHeaderClass: UICollectionReusableView {
         textLabel = label
         textLabel.textAlignment = .center
         textLabel.text = "Flashcards"
-        textLabel.font = .preferredFont(forTextStyle: .title1)
+        textLabel.font = UIFont.systemFont(ofSize: 32, weight: .bold)
         
         dividerView = UIView()
         dividerView.translatesAutoresizingMaskIntoConstraints = false
@@ -38,7 +38,7 @@ class MyHeaderClass: UICollectionReusableView {
             dividerView.bottomAnchor.constraint(equalTo: bottomAnchor),
             dividerView.heightAnchor.constraint(equalToConstant: 1.0),
         ])
-        dividerView.backgroundColor = .lightGray
+        dividerView.backgroundColor = .systemIndigo
         
         backgroundColor = UIColor.systemBackground
     }
@@ -51,38 +51,9 @@ class MyHeaderClass: UICollectionReusableView {
 
 class MyFooterClass: UICollectionReusableView {
     
-    private var dividerView: UIView!
-    weak var textLabel: UILabel!
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(label)
-        NSLayoutConstraint.activate([
-            label.topAnchor.constraint(equalTo: topAnchor),
-            label.leadingAnchor.constraint(equalTo: leadingAnchor),
-            label.trailingAnchor.constraint(equalTo: trailingAnchor),
-        ])
-        textLabel = label
-        textLabel.textAlignment = .center
-        textLabel.text = "Flashcards end..."
-        
-        dividerView = UIView()
-        dividerView.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(dividerView)
-        NSLayoutConstraint.activate([
-            dividerView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            dividerView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            dividerView.topAnchor.constraint(equalTo: textLabel.topAnchor, constant: -8.0),
-            dividerView.heightAnchor.constraint(equalToConstant: 1.0),
-            
-        ])
-        dividerView.backgroundColor = .lightGray
-        
-        backgroundColor = .systemBackground
+        backgroundColor = .systemGray6
     }
     
     required init?(coder: NSCoder) {
@@ -131,7 +102,7 @@ class FlowLayout: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        collectionView.backgroundColor = UIColor.systemBackground
+        collectionView.backgroundColor = UIColor.systemGray6
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(MyCell.self, forCellWithReuseIdentifier: "MyCell")
@@ -172,7 +143,7 @@ extension FlowLayout: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.size.width - 16, height: 72)
+        return CGSize(width: collectionView.bounds.size.width - 32, height: 72)
     }
 
     //  If unspecified default value of 10 is used.
@@ -212,7 +183,7 @@ extension FlowLayout: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         referenceSizeForHeaderInSection section: Int) -> CGSize {
-            return CGSize(width: 0, height: 72.0)
+        return CGSize(width: 0, height: 72.0)
     }
 
     func collectionView(_ collectionView: UICollectionView,
@@ -275,8 +246,6 @@ class MyCell: UICollectionViewCell {
         self.backLabel = backLabel
         
         contentView.layer.cornerRadius = 16.0
-        contentView.layer.borderWidth = 1.0
-        contentView.layer.borderColor = UIColor.systemIndigo.cgColor
         contentView.backgroundColor = UIColor.systemBackground
         
         textLabel.textAlignment = .center

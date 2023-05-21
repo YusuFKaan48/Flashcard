@@ -58,14 +58,7 @@ class DailyMessageView: UIView {
         ])
         
         NSLayoutConstraint.activate([
-           iconImageView.widthAnchor.constraint(equalToConstant: 120),
-            iconImageView.heightAnchor.constraint(equalToConstant: 40),
-
-
-            
-            messageLabel.leadingAnchor.constraint(equalToSystemSpacingAfter: leadingAnchor, multiplier: 1),
-            
-            trailingAnchor.constraint(equalToSystemSpacingAfter: iconImageView.trailingAnchor, multiplier: 1),
+           messageLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
         ])
     }
     
