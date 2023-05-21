@@ -46,9 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func prepMainView() {
-    //    mainViewController.setStatusBar()
         UINavigationBar.appearance().isTranslucent = false
-    //    UINavigationBar.appearance().backgroundColor = appColor
     }
 }
 

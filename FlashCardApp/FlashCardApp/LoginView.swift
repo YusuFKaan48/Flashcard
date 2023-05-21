@@ -70,7 +70,6 @@ extension LoginView {
     }
 }
 
-// MARK: - UITextFieldDelegate
 extension LoginView: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

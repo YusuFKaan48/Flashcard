@@ -42,15 +42,13 @@ extension OnboardingViewController {
         stackView.axis = .vertical
         stackView.spacing = 20
         
-        // titleLabel
         titleNameView.translatesAutoresizingMaskIntoConstraints = false
         titleNameView.textAlignment = .center
         titleNameView.font = UIFont.preferredFont(forTextStyle: .largeTitle)
         titleNameView.adjustsFontForContentSizeCategory = true
         titleNameView.numberOfLines = 0
         titleNameView.text = titleName
-        
-        // labelTextLabel
+   
         labelTextView.translatesAutoresizingMaskIntoConstraints = false
         labelTextView.textAlignment = .center
         labelTextView.font = UIFont.preferredFont(forTextStyle: .title3)

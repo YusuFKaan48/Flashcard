@@ -31,12 +31,12 @@ extension HouseViewController {
         dividerView.translatesAutoresizingMaskIntoConstraints = false
         
         dividerView.backgroundColor = .secondarySystemFill
-        
+    
         todayWordLabel.translatesAutoresizingMaskIntoConstraints = false
         todayWordLabel.textAlignment = .center
         todayWordLabel.font = UIFont.systemFont(ofSize: 32, weight: .bold)
         todayWordLabel.adjustsFontForContentSizeCategory = true
-        todayWordLabel.text = "Todays's Word"
+        todayWordLabel.text = "Todays's Words"
     }
     
     func layout() {
@@ -48,8 +48,6 @@ extension HouseViewController {
         
         NSLayoutConstraint.activate([
             dailyMessageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
-     //      dailyMessageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-     //       dailyMessageView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
         
         NSLayoutConstraint.activate([

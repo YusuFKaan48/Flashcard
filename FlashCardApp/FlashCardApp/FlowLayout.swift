@@ -74,7 +74,6 @@ class FlowLayout: UIViewController {
 
     weak var collectionView: UICollectionView!
     
-    // Define resuse identifiers
     let headerReuseIdentifier = "headerReuseIdentifier"
     let footerReuseIdentifier = "footerReuseIdentifier"
     
@@ -91,7 +90,6 @@ class FlowLayout: UIViewController {
             cv.trailingAnchor.constraint(equalTo: view.trailingAnchor),
         ])
         
-        // Register headers & footer with resuse identifiers
         cv.register(MyHeaderClass.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerReuseIdentifier)
 
         cv.register(MyFooterClass.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: footerReuseIdentifier)
@@ -146,21 +144,18 @@ extension FlowLayout: UICollectionViewDelegateFlowLayout {
         return CGSize(width: collectionView.bounds.size.width - 32, height: 72)
     }
 
-    //  If unspecified default value of 10 is used.
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 12
     }
 
-    // Only top and bottom spaced if vertical scrolling (dependent on scroll direction)
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets.init(top: 20, left: -80, bottom: 20, right: -80)
     }
 
-    // Support new header and footer in collection
     func collectionView(_ collectionView: UICollectionView,
                         viewForSupplementaryElementOfKind kind: String,
                         at indexPath: IndexPath) -> UICollectionReusableView {

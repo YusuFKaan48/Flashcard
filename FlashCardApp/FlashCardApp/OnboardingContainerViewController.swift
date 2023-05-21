@@ -27,7 +27,6 @@ class OnboardingContainerViewController: UIViewController {
         
         let page1 = OnboardingViewController(titleName: "Welcome", labelText: "When you tap on the flashcard, it flips over and displays meaning of the word.")
         let page2 = OnboardingViewController(titleName: "I have something to say.", labelText: "Congratulations on your learning journey. To continue, please press the close button.")
-
         
         pages.append(page1)
         pages.append(page2)
@@ -42,12 +41,11 @@ class OnboardingContainerViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        
         setup()
         style()
         layout()
-
     }
+    
     private func setup(){
         super.viewDidLoad()
         
@@ -68,8 +66,9 @@ class OnboardingContainerViewController: UIViewController {
         pageViewController.setViewControllers([pages.first!], direction: .forward, animated: false, completion: nil)
         currentVC = pages.first!
     }
+    
     private func style(){
-        // Close
+    
         closeButton.translatesAutoresizingMaskIntoConstraints = false
         closeButton.setTitle("Close", for: [])
         closeButton.addTarget(self, action: #selector(closeTapped), for: .primaryActionTriggered)
@@ -77,7 +76,7 @@ class OnboardingContainerViewController: UIViewController {
         view.addSubview(closeButton)
     }
     private func layout(){
-        // Close
+  
         NSLayoutConstraint.activate([
             closeButton.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 2),
             closeButton.topAnchor.constraint(equalToSystemSpacingBelow: view.safeAreaLayoutGuide.topAnchor, multiplier: 2)
@@ -85,7 +84,7 @@ class OnboardingContainerViewController: UIViewController {
     }
 }
 
-// MARK: - UIPageViewControllerDataSource
+
 extension OnboardingContainerViewController: UIPageViewControllerDataSource {
 
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
@@ -117,7 +116,7 @@ extension OnboardingContainerViewController: UIPageViewControllerDataSource {
     }
 }
 
-// Mark: - Actions
+
 extension OnboardingContainerViewController{
     @objc func closeTapped(_ sender: UIButton) {
         delegate?.didFinishOnboarding()

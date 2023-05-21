@@ -40,7 +40,7 @@ class DailyMessageView: UIView {
         
         iconImageView.translatesAutoresizingMaskIntoConstraints = false
         iconImageView.contentMode = .scaleAspectFit
-        iconImageView.tintColor = .systemIndigo
+        iconImageView.tintColor = .systemYellow
     }
     
     func layout() {
@@ -49,7 +49,6 @@ class DailyMessageView: UIView {
         stackView.addArrangedSubview(messageLabel)
         stackView.addArrangedSubview(iconImageView)
     
-        // StackView
         NSLayoutConstraint.activate([
             stackView.topAnchor.constraint(equalToSystemSpacingBelow: topAnchor, multiplier: 1),
             stackView.leadingAnchor.constraint(equalToSystemSpacingAfter: leadingAnchor, multiplier: 1),

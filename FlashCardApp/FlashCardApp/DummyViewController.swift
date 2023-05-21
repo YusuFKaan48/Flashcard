@@ -20,14 +20,12 @@ class DummyViewController: UIViewController {
         super.viewDidLoad()
         style()
         layout()
-        
     }
 }
 
 extension DummyViewController {
     
     func style() {
-        
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         stackView.spacing = 20
