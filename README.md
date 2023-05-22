@@ -36,7 +36,7 @@ The DailyMessageView class is a subclass of UIView that displays a daily message
 
 # Today's Words part
 
-TodayWordView is a UIView subclass that contains components for displaying a word and its translation. It has two arrays, wordLabels for the word labels and translationLabels for the translation labels. The style and layout of the view are set using the style() and layout() methods. The loadSavedWords() method retrieves the saved word indices and updates the labels accordingly. If the saved indices are not available, the selectRandomWords() method selects random words. The scheduleWordUpdate() method schedules a word update after 24 hours. Overall, TodayWordView is a component that dynamically displays words and translations, making it suitable for learning purposes.
+TodayWordView is a section where 5 randomly selected words and their meanings are displayed, with an update scheduled every 24 hours.
 
 <img src="https://github.com/YusuFKaan48/Flashcard/assets/111217286/485c1044-3217-45da-be38-5dfe8c23c0b1" width="168" height="263">
 
@@ -44,6 +44,10 @@ TodayWordView is a UIView subclass that contains components for displaying a wor
 
 I have created flashcards using UICollectionView. The collection view consists of horizontally scrollable cells. Each cell contains a word and its translation. When a cell is tapped, it flips to reveal the meaning on the backside of the card.
 
-<img src="https://github.com/YusuFKaan48/Flashcard/assets/111217286/94f48c20-e182-4a05-8b95-8f57a484bd8d" alt="GIF Caption" width="187.5" height="406">
+Scroll and cell tapped  example:
+
+<img src="https://github.com/YusuFKaan48/Flashcard/assets/111217286/6ba828ff-3f76-463f-9b4e-a0ec8f446cd3" alt="GIF Caption" width="187.5" height="406">
+
+
 
 
