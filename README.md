@@ -28,12 +28,18 @@ Second-time onboarding example:
 
 The DailyMessageView class is a subclass of UIView that displays a daily message. This class contains two sub-components, messageLabel and iconImageView. When the imageName property is modified, the image displayed by the iconImageView is updated, and the updateMessageAndIcon() function is called. This function determines a message text and icon name based on the current hour and updates them on the messageLabel and iconImageView respectively. Thus, the DailyMessageView class dynamically shows the user the daily message.
 
-
 <img src="https://github.com/YusuFKaan48/Flashcard/assets/111217286/40a0fc4c-120c-4294-8e6f-086bb16257a9" alt="GIF Caption" width="135" height="30">
 
 <img src="https://github.com/YusuFKaan48/Flashcard/assets/111217286/04bc819a-16b8-4ff1-9df4-394f45e8e019" alt="GIF Caption" width="157.5" height="30">
 
 <img src="https://github.com/YusuFKaan48/Flashcard/assets/111217286/e1c759aa-b95e-41ce-822a-6e78acbca381" alt="GIF Caption" width="135" height="30">
+
+# Today's Words part
+
+TodayWordView is a UIView subclass that contains components for displaying a word and its translation. It has two arrays, wordLabels for the word labels and translationLabels for the translation labels. The style and layout of the view are set using the style() and layout() methods. The loadSavedWords() method retrieves the saved word indices and updates the labels accordingly. If the saved indices are not available, the selectRandomWords() method selects random words. The scheduleWordUpdate() method schedules a word update after 24 hours. Overall, TodayWordView is a component that dynamically displays words and translations, making it suitable for learning purposes.
+
+<img src="https://github.com/YusuFKaan48/Flashcard/assets/111217286/485c1044-3217-45da-be38-5dfe8c23c0b1" width="168" height="263">
+
 
 
 
