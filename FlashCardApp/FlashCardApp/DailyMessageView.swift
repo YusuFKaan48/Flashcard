@@ -77,8 +77,10 @@ class DailyMessageView: UIView {
             message = "Good Morning"
             symbolName = "sun.max.fill"
         } else if currentHour >= 12 && currentHour < 18 {
-            message = "Good Afternoon"
-           symbolName = "cloud.sun.fill"
+         //   message = "Good Afternoon"
+        //   symbolName = "cloud.sun.fill"
+            message = "Good Morning"
+            symbolName = "sun.max.fill"
         } else {
             message = "Good Night"
             symbolName = "moon.stars.fill"

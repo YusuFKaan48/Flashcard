@@ -81,9 +81,3 @@ extension AppDelegate: OnboardingContainerViewControllerDelegate {
         setRootViewController(mainViewController)
     }
 }
-
-extension AppDelegate: LogoutDelegate {
-    @objc func didLogout() {
-        setRootViewController(loginViewController)
-    }
-}
