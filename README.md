@@ -40,6 +40,10 @@ TodayWordView is a UIView subclass that contains components for displaying a wor
 
 <img src="https://github.com/YusuFKaan48/Flashcard/assets/111217286/485c1044-3217-45da-be38-5dfe8c23c0b1" width="168" height="263">
 
+# Flashcards part
 
+I have created flashcards using UICollectionView. The collection view consists of horizontally scrollable cells. Each cell contains a word and its translation. When a cell is tapped, it flips to reveal the meaning on the backside of the card.
+
+<img src="https://github.com/YusuFKaan48/Flashcard/assets/111217286/94f48c20-e182-4a05-8b95-8f57a484bd8d" alt="GIF Caption" width="187.5" height="406">
 
 
