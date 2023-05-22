@@ -24,8 +24,16 @@ Second-time onboarding example:
 
 <img src="https://github.com/YusuFKaan48/Flashcard/assets/111217286/b22cb70a-b00e-4407-89c6-0f6d22703138" alt="GIF Caption" width="375" height="812">
 
+# Daily message part
+
+The DailyMessageView class is a subclass of UIView that displays a daily message. This class contains two sub-components, messageLabel and iconImageView. When the imageName property is modified, the image displayed by the iconImageView is updated, and the updateMessageAndIcon() function is called. This function determines a message text and icon name based on the current hour and updates them on the messageLabel and iconImageView respectively. Thus, the DailyMessageView class dynamically shows the user the daily message.
 
 
+<img src="https://github.com/YusuFKaan48/Flashcard/assets/111217286/40a0fc4c-120c-4294-8e6f-086bb16257a9" alt="GIF Caption" width="180" height="40">
+
+<img src="https://github.com/YusuFKaan48/Flashcard/assets/111217286/04bc819a-16b8-4ff1-9df4-394f45e8e019" alt="GIF Caption" width="210" height="40">
+
+<img src="https://github.com/YusuFKaan48/Flashcard/assets/111217286/e1c759aa-b95e-41ce-822a-6e78acbca381" alt="GIF Caption" width="180" height="40">
 
 
 
