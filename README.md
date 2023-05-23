@@ -2,7 +2,7 @@
 
 # Login Part
 
-This code represents a login screen that is typically used in iOS applications. The login screen provides the user with a title, subtitle, username and password input fields, a login button, and a label to display error messages. You can notify the occurrence of this event using the LoginViewControllerDelegate protocol when the user logs in. If any errors occur during the login process, they are displayed to the user through the error message label. To help you understand the login screen better, relevant text labels and buttons are placed with the view components, and the view's layout is set using the layout() method.
+The LoginView is a login screen that utilizes the protocol-delegate pattern to handle the login event. If a login attempt fails, it displays error messages specific to the situation.
 
 Successful login example:
 
