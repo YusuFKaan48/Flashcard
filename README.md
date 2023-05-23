@@ -2,6 +2,8 @@
 
 Flashcard is an application designed for learning new words. It provides users with word cards to facilitate the learning process. The collection view allows users to explore a variety of words by smoothly scrolling horizontally. The login screen enables users to securely access the application by entering their username and password. The onboarding screen serves as a helpful introduction, acquainting first-time users with the basic features of the app. The daily message section dynamically displays different messages to users based on the current time of day, enhancing their engagement and experience. Additionally, the Today's Words section presents a curated selection of words on a daily basis, allowing users to expand their vocabulary. With these features, Flashcard offers an immersive and interactive platform for users to enhance their word-learning journey.
 
+In app screenshots:
+
 <img src="https://github.com/YusuFKaan48/Flashcard/assets/111217286/871ab142-f64f-4970-b37d-13a41825fa5b" alt="GIF Caption" width="187.5" height="406">
 <img src="https://github.com/YusuFKaan48/Flashcard/assets/111217286/8a1f1a07-abe4-4d0d-8c3f-ad7e74e183a5" alt="GIF Caption" width="187.5" height="406">
 <img src="https://github.com/YusuFKaan48/Flashcard/assets/111217286/70c0512c-3cec-485c-bb6b-3eb556a62ab1" alt="GIF Caption" width="187.5" height="406">
