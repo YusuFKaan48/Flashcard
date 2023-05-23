@@ -14,7 +14,7 @@ Unsuccessful login example:
 
 # Onboarding Part
 
-This part is designed to display an onboarding screen to the user on the first launch of the application and then ensure that the screen is not shown again by using UserDefaults. This approach promotes user exploration of the application's features and provides a better user experience.
+This part is designed to display an onboarding screen to the user on the first launch of the application and then ensure that the screen is not shown again by using UserDefaults. 
 
 First-time onboarding example:
 
@@ -26,7 +26,7 @@ Second-time onboarding example:
 
 # Daily message part
 
-The DailyMessageView class is a subclass of UIView that displays a daily message. This class contains two sub-components, messageLabel and iconImageView. When the imageName property is modified, the image displayed by the iconImageView is updated, and the updateMessageAndIcon() function is called. This function determines a message text and icon name based on the current hour and updates them on the messageLabel and iconImageView respectively. Thus, the DailyMessageView class dynamically shows the user the daily message.
+The purpose of the DailyMessageView is to display different messages and icons to the user based on the time of day.
 
 <img src="https://github.com/YusuFKaan48/Flashcard/assets/111217286/40a0fc4c-120c-4294-8e6f-086bb16257a9" alt="GIF Caption" width="135" height="30">
 
