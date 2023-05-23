@@ -1,5 +1,12 @@
 # Flashcard
 
+<img src="https://github.com/YusuFKaan48/Flashcard/assets/111217286/871ab142-f64f-4970-b37d-13a41825fa5b" alt="GIF Caption" width="187.5" height="406">
+<img src="https://github.com/YusuFKaan48/Flashcard/assets/111217286/8a1f1a07-abe4-4d0d-8c3f-ad7e74e183a5" alt="GIF Caption" width="187.5" height="406">
+<img src="https://github.com/YusuFKaan48/Flashcard/assets/111217286/70c0512c-3cec-485c-bb6b-3eb556a62ab1" alt="GIF Caption" width="187.5" height="406">
+<img src="https://github.com/YusuFKaan48/Flashcard/assets/111217286/00b472f5-5491-4990-9323-7402516b8712" alt="GIF Caption" width="187.5" height="406">
+<img src="https://github.com/YusuFKaan48/Flashcard/assets/111217286/919d6fb7-280a-4f70-b902-98919b252884" alt="GIF Caption" width="187.5" height="406">
+
+
 # Login Part
 
 The LoginView is a login screen that utilizes the protocol-delegate pattern to handle the login event. If a login attempt fails, it displays error messages specific to the situation.
@@ -38,7 +45,8 @@ The purpose of the DailyMessageView is to display different messages and icons t
 
 TodayWordView is a section where 5 randomly selected words and their meanings are displayed, with an update scheduled every 24 hours.
 
-<img src="https://github.com/YusuFKaan48/Flashcard/assets/111217286/485c1044-3217-45da-be38-5dfe8c23c0b1" width="168" height="263">
+<img src="https://github.com/YusuFKaan48/Flashcard/assets/111217286/d984bce3-1b0a-4dea-81b1-a2d6377f1c15" width="165" height="255">
+
 
 # Flashcards part
 
@@ -46,8 +54,4 @@ I have created flashcards using UICollectionView. The collection view consists o
 
 Scroll and cell tapped  example:
 
-<img src="https://github.com/YusuFKaan48/Flashcard/assets/111217286/6ba828ff-3f76-463f-9b4e-a0ec8f446cd3" alt="GIF Caption" width="187.5" height="406">
-
-
-
-
+<img src="https://github.com/YusuFKaan48/Flashcard/assets/111217286/090ba2d3-be7d-4b6b-9a63-4b78d64fd856" alt="GIF Caption" width="187.5" height="406">
