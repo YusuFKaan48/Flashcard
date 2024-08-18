@@ -2,7 +2,7 @@
 
 Flashcard is a word learning app that utilizes word cards to help users learn new words. It features a collection view that enables users to scroll horizontally and access different words. The login screen allows users to enter their username and password to access the app. The onboarding screen introduces first-time users to the app's basic features. The daily message section displays messages tailored to the current time of day. The Today's Words section showcases a selection of daily chosen words. Overall, Flashcard provides an engaging platform for users to expand their vocabulary.
 
-There is a bug with the videos' width!!!
+There is a bug with the video width!!!
 
 In app screenshots:
 
