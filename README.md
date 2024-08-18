@@ -17,7 +17,7 @@ The LoginView is a login screen that utilizes the protocol-delegate pattern to h
 
 Successful login example:
 
-<img src="https://github.com/YusuFKaan48/Flashcard/assets/111217286/832ee95f-61cf-4bb5-8959-ab693e0bb13f" alt="GIF Caption" width="187.5" height="406">
+<img src="https://github.com/YusuFKaan48/Flashcard/assets/111217286/832ee95f-61cf-4bb5-8959-ab693e0bb13f" alt="GIF Caption" width="187.0" height="406">
 
 Unsuccessful login example:
 
